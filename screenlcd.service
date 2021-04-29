@@ -1,0 +1,12 @@
+[Unit]
+Description=Service Screen Brithness
+After=multi-user.target
+
+[Service]
+User=fcd
+Type=idle
+ExecStart=sh -c "DISPLAY=:1 /usr/bin/python /home/fcd/Python/screen/main.py"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
